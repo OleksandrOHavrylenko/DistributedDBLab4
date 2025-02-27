@@ -2,6 +2,7 @@ package com.distributed.databases;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
+import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 
@@ -14,6 +15,7 @@ public class MongoConfig {
     public static MongoClient getClient() {
         final MongoClientSettings settings = MongoClientSettings.builder()
                 .applyConnectionString(new ConnectionString(MONGO_URI))
+                .writeConcern(WriteConcern.MAJORITY)
                 .build();
         final MongoClient mongoClient = MongoClients.create(settings);
 

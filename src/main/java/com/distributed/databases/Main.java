@@ -2,8 +2,6 @@ package com.distributed.databases;
 
 import com.distributed.databases.tests.CounterTest;
 import com.distributed.databases.tests.MongoCounterTest;
-import com.mongodb.client.MongoClient;
-import org.bson.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

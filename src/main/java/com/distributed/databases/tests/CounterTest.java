@@ -5,19 +5,14 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.InsertOneOptions;
 import com.mongodb.client.model.Updates;
 import com.mongodb.client.result.InsertOneResult;
 import com.mongodb.client.result.UpdateResult;
-import org.bson.BsonValue;
 import org.bson.Document;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Oleksandr Havrylenko
@@ -35,21 +30,21 @@ public interface CounterTest {
         try(MongoClient mongoClient = MongoConfig.getClient()) {
             Document like = new Document("_id", new ObjectId(OBJECT_ID))
                     .append("item", 10)
-                    .append("likesCount", 0L);
+                    .append(LIKES_COUNT, 0L);
 
             MongoDatabase shopDatabase = mongoClient.getDatabase(DB_NAME);
             MongoCollection<Document> likesCollection = shopDatabase.getCollection(LIKES_COLLECTION);
+
             Bson query  = Filters.eq("_id", new ObjectId(OBJECT_ID));
-            Bson update = Updates.set("likesCount", 0L);
-            Document findResult = likesCollection.find(query).first();
-            logger.info("Find result : {}", findResult);
-            if (findResult == null) {
+            Bson update = Updates.set(LIKES_COUNT, 0L);
+            UpdateResult updateResult = likesCollection.updateOne(query, update);
+            logger.info("Find updateResult : {}", updateResult);
+
+            if (updateResult.getMatchedCount() != 1L) {
                 InsertOneResult insertOneResult = likesCollection.insertOne(like);
                 logger.info("Inserted like item: {} with _id: {}", like, insertOneResult.getInsertedId());
-            } else {
-                UpdateResult updateResult = likesCollection.updateOne(query, update);
-                logger.info("Updated result : {}", updateResult);
             }
+
             logger.info("Updated like item with _id: {}", like);
         }
     }
