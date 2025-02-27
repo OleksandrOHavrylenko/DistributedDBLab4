@@ -1,5 +1,7 @@
 package com.distributed.databases;
 
+import com.distributed.databases.tests.CounterTest;
+import com.distributed.databases.tests.MongoCounterTest;
 import com.mongodb.client.MongoClient;
 import org.bson.Document;
 import org.slf4j.Logger;
@@ -19,22 +21,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        try (MongoClient mongoClient = MongoConfig.getClient()) {
-            List<Document> databases = mongoClient.listDatabases().into(new ArrayList<>());
-            databases.forEach(db -> System.out.println(db.toJson()));
-        }
+        final CounterTest counterTest = new MongoCounterTest();
+        counterTest.createData();
 
-//        final CounterTest counterTest = new MongoCounterTest();
-//        counterTest.createData();
-//
-//        long start = System.nanoTime();
-//
-//        testDatabaseCounter(THREADS_10, () -> counterTest.test(COUNTER_10000));
-//
-//        long finish = System.nanoTime();
-//
-//        logger.info("{}\nFinal result counter = {} per Duration: {} ms;",
-//                counterTest.getDescription(), counterTest.getResult(), (finish - start) / 1_000_000.0);
+        long start = System.nanoTime();
+
+        testDatabaseCounter(THREADS_10, () -> counterTest.test(COUNTER_10000));
+
+        long finish = System.nanoTime();
+
+        logger.info("Final result counter = {} per Duration: {} ms;",
+                counterTest.getResult(), (finish - start) / 1_000_000.0);
+
     }
 
     private static void testDatabaseCounter(final int threadsNum, Runnable task) {
