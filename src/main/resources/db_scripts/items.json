@@ -1,0 +1,146 @@
+[
+	{
+	  "category" : "Phone",
+	  "model" : "iPhone 6",
+	  "producer" : "Apple",
+	  "price" : 600
+	},
+	{
+	  "category" : "Phone",
+	  "model" : "iPhone 10",
+	  "producer" : "Apple",
+	  "price" : 700
+	},
+	{
+	  "category" : "Phone",
+	  "model" : "iPhone 12",
+	  "producer" : "Apple",
+	  "price" : 1000
+	},
+	{
+	  "category" : "Phone",
+	  "model" : "iPhone 15",
+	  "producer" : "Apple",
+	  "price" : 1200
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "ThinkPad T14",
+	  "producer" : "Lenovo",
+	  "price" : 1200
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "ThinkPad T16",
+	  "producer" : "Lenovo",
+	  "price" : 1600
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "ThinkPad P14",
+	  "producer" : "Lenovo",
+	  "price" : 1250
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "ThinkPad P16",
+	  "producer" : "Lenovo",
+	  "price" : 1650
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "Legion Pro7",
+	  "producer" : "Lenovo",
+	  "price" : 2500
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "Legion 9",
+	  "producer" : "Lenovo",
+	  "price" : 3000
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "ProBook 640",
+	  "producer" : "HP",
+	  "price" : 300
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "ProBook 840",
+	  "producer" : "HP",
+	  "price" : 350
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "Chromebook 14",
+	  "producer" : "HP",
+	  "price" : 400
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "Chromebook 16",
+	  "producer" : "HP",
+	  "price" : 400
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "Latitude 5580",
+	  "producer" : "Dell",
+	  "price" : 330
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "Latitude 7490",
+	  "producer" : "Dell",
+	  "price" : 400
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "Vostro 3530",
+	  "producer" : "Dell",
+	  "price" : 500
+	},
+	{
+	  "category" : "Laptop",
+	  "model" : "Inspiron 15",
+	  "producer" : "Dell",
+	  "price" : 550
+	},
+	{
+	  "category" : "Phone",
+	  "model" : "Galaxy S25",
+	  "producer" : "Samsung",
+	  "price" : 1500
+	},
+	{
+	  "category" : "Phone",
+	  "model" : "Galaxy A35",
+	  "producer" : "Samsung",
+	  "price" : 400
+	},
+	{
+	  "category" : "TV",
+	  "model" : "43UT91006LA",
+	  "producer" : "LG",
+	  "price" : 520
+	},
+	{
+	  "category" : "TV",
+	  "model" : "Bravia 8",
+	  "producer" : "Sony",
+	  "price" : 2700
+	},
+	{
+	  "category" : "Camera",
+	  "model" : "Galaxy S25",
+	  "producer" : "Canon",
+	  "price" : 1500
+	},
+	{
+	  "category" : "Camera",
+	  "model" : "D5100",
+	  "producer" : "Nikon",
+	  "price" : 600
+	}	
+]

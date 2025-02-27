@@ -1,0 +1,50 @@
+[
+	{
+	  "order_number" : 201513,
+	  "date" : {"$date": "2024-04-14T12:31:18Z"},
+	  "total_sum" : 4400,
+	  "customer" : {
+		"name" : "Ivan",
+		"surname" : "Ivanov",
+		"phones" : [9876543, 1234567],
+		"address" : "Peremohy 37, Kyiv, UA"
+	  },
+	  "payment" : {
+		"card_owner" : "Ivan Ivanov",
+		"cardId" : 1234567812459875
+	  },
+	  "items_id" : ["67bdea069edb60e01837cd90", "67bdea069edb60e01837cd91", "67bdea069edb60e01837cda0", "67bdea069edb60e01837cd92", "67bdea069edb60e01837cd96", "67bdea069edb60e01837cd9b"]
+	},
+	{
+	  "order_number" : 201514,
+	  "date" : {"$date": "2024-04-15T12:32:18Z"},
+	  "total_sum" : 5800,
+	  "customer" : {
+		"name" : "Petro",
+		"surname" : "Petrov",
+		"phones" : [9812543, 1154567],
+		"address" : "Peremohy 39, Kyiv, UA"
+	  },
+	  "payment" : {
+		"card_owner" : "Petro Petrov",
+		"cardId" : 1212344756783254
+	  },
+	  "items_id" : ["67bdea069edb60e01837cd93", "67bdea069edb60e01837cd92", "67bdea069edb60e01837cda0", "67bdea069edb60e01837cd94", "67bdea069edb60e01837cda2", "67bdea069edb60e01837cda3"]
+	},
+	{
+	  "order_number" : 201515,
+	  "date" : {"$date": "2024-04-16T12:33:18Z"},
+	  "total_sum" : 9320,
+	  "customer" : {
+		"name" : "Hanna",
+		"surname" : "Petrova",
+		"phones" : [9776543, 4134567],
+		"address" : "Peremohy 45, Kyiv, UA"
+	  },
+	  "payment" : {
+		"card_owner" : "Hanna Petrova",
+		"cardId" : 4517123415687780
+	  },
+	  "items_id" : ["67bdea069edb60e01837cd99", "67bdea069edb60e01837cd91", "67bdea069edb60e01837cd9c", "67bdea069edb60e01837cda0", "67bdea069edb60e01837cda4", "67bdea069edb60e01837cda2", "67bdea069edb60e01837cda5"]
+	}
+]	
